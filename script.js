@@ -10,7 +10,7 @@ Car.prototype.getMakeModel = function () {
 
 function SportsCar(make, model, topSpeed) {
 	Car.call(this, make, model);
-	this.speed = topSpeed;
+	this.topSpeed = topSpeed; // FIX: property name
 }
 
 // Proper inheritance
@@ -18,7 +18,7 @@ SportsCar.prototype = Object.create(Car.prototype);
 SportsCar.prototype.constructor = SportsCar;
 
 SportsCar.prototype.getTopSpeed = function () {
-	return this.speed;
+	return this.topSpeed; // FIX: match property
 };
 
 // Create a new SportsCar instance
